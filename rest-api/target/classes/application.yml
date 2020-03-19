@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: dev
+---
+
+spring:
+  profiles: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12328302
+    username: sql12328302
+    password: fzEKsceqTX
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+server:
+  port: 8081
+cloudinary:
+  cloud_name: dathandsome
+  api_key: 112536564139945
+  api_secret: _HdfWcxxWGMS-DPy1sWfwohHWew
+
+---
+spring:
+  profiles: pro
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/pyfood
+    username: root
+    password: root
+server:
+  port: 8082
+cloudinary:
+  cloud_name: dathandsome
+  api_key: 112536564139945
+  api_secret: _HdfWcxxWGMS-DPy1sWfwohHWew
+
